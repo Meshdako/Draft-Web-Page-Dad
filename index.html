@@ -5,90 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borrador</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <style>
-        .carousel-inner img {
-            width: 100%;
-            height: 800px;
+        body {
+            background-color: #d8c292;
+        }
+
+        span {
+            border: solid;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        span:hover {
+            background-color: #5b5b5b;
+            color: #d8c292;
+            border: solid #d8c292;
         }
     </style>
 </head>
-<body style="height:1500px">
-
+<body>
     <!-- Barra de Navegación -->
-    
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Inicio</a>
+        <a href="/NavBar/QuieSomos.html">Quienes Somos</a>
+        <a href="/NavBar/ServProd.html">Servicios y Productos</a>
+        <a href="/NavBar/Contacto.html">Contacto</a>
+    </div>
 
-    <!-- Banner -->
-    <!-- <div class="container"> -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 50px;">
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">Menú</span>
 
-            <ul class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-            </ul>
-
-            <!-- The slideshow -->
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Imágenes/Imagen-Banner-1.jpg" alt="Banner-1" width="1100" height="500">
-                </div>
-                <div class="carousel-item">
-                    <img src="Imágenes/Imagen-Banner-2.jpg" alt="Banner-2" width="1000" height="500">
-                </div>
-            </div>
-            
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+        <div class="Cabeza">
+            <h1>
+                Nombre de la Empresa
+            </h1>
+            <p>
+                Construcción
+            </p>
         </div>
-    <!-- </div> -->
 
-    <!-- Proyectos -->
-    <div class="container p-3 my-3 bg-dark text-white">
-        
+        <div class="Cuerpo">
+
+        </div>
+
+        <div class="Pie">
+            Copyrigth 2021. | Desarrollada por Meshdako Inc.
+        </div>
     </div>
 
-    <!-- Contáctos -->
-    <div class="container p-3 my-3 bg-dark text-white">
-        <h2>
-            Contáctenos
-        </h2>
-        <h3>
-            Teléfono
-        </h3>
-        <p>
-            +569 752 88 396
-        </p>
-        <h3>
-            Email de Contaco
-        </h3>
-        <p>
-            bladimir.sobarzo@gmail.com
-        </p>
-    </div>
-    <div class="container-xl mt-3 border">
-        <p>Desarrollado por Meshdako Inc.</p>
-    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(216, 194, 146, 0.8)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "#d8c292";
+        } 
+    </script>
 </body>
 </html>
